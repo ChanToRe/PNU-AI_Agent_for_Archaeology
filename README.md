@@ -2,20 +2,17 @@
 
 본 레포지토리는 2026년 7월 15일 부산대학교 고고학과 BK21 사업단 특강 `AI 코딩을 활용한 고고학 자료 분석 실습`의 강의자료를 정리해둔 레포지토리입니다. 
 
-
-
-
 ## 1. 개발환경 구성
 
 ### 1.1 R
 
 #### 소개
 
-R은 데이터 분석 및 통계분석에 특화된 오픈소스 프로그래밍 언어입니다. University of Auckland의 Ross Ihaka와 Robert Gentleman에 의해 개발되었으며, 데이터 처리와 시각화에 특화되어 있습니다. 통게분석과 관련된 수많은 패키지들이 구현되어 있으며, 고고학 분석에 활용되는 패키지들도 대부분 R로 구현되어 있습니다.
+R은 데이터 분석 및 통계분석에 특화된 오픈소스 프로그래밍 언어입니다. University of Auckland의 Ross Ihaka와 Robert Gentleman에 의해 개발되었으며, 데이터 처리와 시각화에 특화되어 있습니다. 통계분석과 관련된 수많은 패키지들이 구현되어 있으며, 고고학 분석에 활용되는 패키지들도 대부분 R로 구현되어 있습니다.
 
 #### 설치
 
-1. CRAN 접속: https://cran.r-project.org/에 접속합니다.
+1. CRAN 접속: https://cran.r-project.org/ 에 접속합니다.
 2. 운영체제 선택: 화면 상단의 `Download R for (운영체제)` 링크를 클릭합니다.
 3. 설치 파일 다운로드:
    1. MacOS: 자신의 프로세서에 맞는 버전을 선택합니다.
@@ -27,19 +24,36 @@ R은 데이터 분석 및 통계분석에 특화된 오픈소스 프로그래밍
 ### 1.2 IDE
 
 #### 소개
-통합개발환경(Integrated Development Environment, IDE)는 코드를 작성, 편집, 컴파일 및 디버그할 수 있는 소프트웨어입니다. 이를 통해 코드 작성하고 프로젝트를 직관적으로 관리할 수 있습니다. 대표적인 IDE로는 Microsoft의 `VScode`, `Visual Studio` / Jetbrains의 `IntelliJ IDEA`, `Pycharms` Apple의 `Xcode` 등이 있습니다.
+통합개발환경(Integrated Development Environment, IDE)는 코드를 작성, 편집, 컴파일 및 디버그할 수 있는 소프트웨어입니다. 이를 통해 편리하게 코드 작성하고 프로젝트를 직관적으로 관리할 수 있습니다. 대표적인 IDE로는 Microsoft의 `VScode`, `Visual Studio` / Jetbrains의 `IntelliJ IDEA`, `Pycharms` Apple의 `Xcode` 등이 있습니다.
 
 #### 설치
-본 강의에서는 가장 범용적으로 사용되는 IDE인 VSCode를 활용합니다. 
-1. 공식 홈페이지 접속: https://code.visualstudio.com/에 접속합니다.
+본 강의에서는 가장 범용적으로 사용되는 IDE인 VSCode를 활용합니다. Microsoft에서 개발하고 배포하는 VScode는 (1)무료, (2)대부분의 운영체제에서 서비스, (3)필요로 하는 컴퓨팅 자원이 적음, (4)수많은 확장기능(Extension) 등의 장점이 있습니다. 아래의 절차에 따라 VScode를 설치해주세요.
+1. 공식 홈페이지 접속: https://code.visualstudio.com/ 에 접속합니다.
 2. 설치 파일 다운로드: 메인 화면의 파란색 `Download for (운영체제)` 버튼을 클릭합니다.
 3. 설치 진행: 다운로드된 Setup 파일을 실행하여 설치를 완료합니다.
 
-### 1.3 LLM TUI 설치
+### 1.3 AI Agent
 
-#### Claude Code
-`Command(⌘) + Spacebar`를 눌러 
-터미널 검색 후 실행
+#### 소개
+AI Agent는 주어진 목표를 달성하기 위해 스스로 환경을 인지하고 계획을 세워 직접 작업을 수행하는 인공지능 시스템입니다. 다양한 작업이 가능하나, 가장 활발하게 응용되고 있는 분야가 코딩입니다. 최근 개발에 활용되는 AI Agent는 사용자를 대신해 파일 시스템을 제어하거나 직접적인 코딩을 수행합니다. 그리고 이러한 복잡한 작업 과정과 결과물을 사용자에게 효과적으로 전달하기 위해 TUI(Text/Terminal User Interface) 형태로 제공되는 것이 특징입니다.
+
+코딩 작업에서 일반적인 LLM 대신 Agent를 활용하는 이유는 **맥락의 이해**과 **직접적인 실행 능력** 때문입니다. 일반적인 챗봇 형태의 LLM을 활용하는 작업이 단편적인 코드를 생성하는 것에 그친다면, 에이전트는 직접적인 수행 권한을 부여받아 프로젝트의 전반적인 구조를 이해하고 결과물을 직접적으로 생성하며, 에러가 발생할 경우 스스로 로그를 분석해 해결책을 적용합니다.
+
+***TUI: 텍스트 문자와 키보드 입력만으로 컴퓨터 프로그램과 상호작용하는 화면 환경. AI 에이전트의 추론 과정이나 시스템의 실행 상태를 직관적으로 이해하는 것에 용이**
+
+#### 설치
+
+AI Agent는 터미널 환경을 통해 간단히 설치할 수 있습니다. 운영체제별 터미널 접속 방법은 아래를 참고해주세요.
+
+```
+- MacOS & Linux: Command(⌘) + Spacebar 누르기 → 터미널(Terminal) 검색 후 실행
+- Windows: Win(⊞) + X 누르기 → 터미널(관리자) 클릭
+```
+
+터미널을 실행하셨다면 본인이 현재 구독하고 있는 유료 AI 서비스에 따라서 AI Agent 설치를 진행해주세요. 각 제품별 설치 명령어는 아래와 같습니다.
+
+#### Claude Code (Anthropic)
+
 ##### - MacOS & Linux
 Mac 또는 Linux에서 `Claude Code`를 설치하려면 아래의 명령을 실행하세요.
 ``` bash
@@ -47,23 +61,25 @@ curl -fsSL https://claude.ai/install.sh | bash
 ```
 
 ##### - Windows
-Windows에서 Claude Code를 설치하려면 아래의 명령을 실행하세요.
-```
+Windows에서 `Claude Code`를 설치하려면 아래의 명령을 실행하세요.
+``` powershell 
 irm https://claude.ai/install.ps1 | iex
 ```
-#### Antigravity CLI
+#### Antigravity CLI (Google)
+*기존에는 `Gemini CLI`가 있었으나, 2026년 6월 18일에 서비스가 종료되었고 `Antigravity CLI`로 일원화 되었습니다.
 ##### - MacOS & Linux
-Mac 또는 Linux에서 `Antigravity CLI`를 설치하려면 아래의 명령을 실행하세요.x
+Mac 또는 Linux에서 `Antigravity CLI`를 설치하려면 아래의 명령을 실행하세요.
 ``` bash
 curl -fsSL https://antigravity.google/cli/install.sh | bash
 ```
 
 ##### - Windows
-``` bash
+Windows에서 Antigravity CLI를 설치하려면 아래의 명령을 실행하세요.
+``` powershell 
 irm https://antigravity.google/cli/install.ps1 | iex
 ```
 
-#### Codex CLI
+#### Codex CLI (OpenAI)
 ##### - MacOS & Linux
 Mac 또는 Linux에서 `Codex CLI`를 설치하려면 아래의 명령을 실행하세요.
 ``` bash
@@ -71,7 +87,23 @@ curl -fsSL https://chatgpt.com/codex/install.sh | sh
 ```
 
 ##### - Windows
+Windows에서 `Codex CLI`를 설치하려면 아래의 명령을 실행하세요.
 ``` powershell 
 irm https://chatgpt.com/codex/install.ps1 | iex
 ```
 
+## 2. 프로젝트 관리
+
+## 3. EDA
+
+**탐색적 데이터 분석(Exploratory Data Analysis, EDA)** 은 데이터의 전반적인 구조와 특징을 파악하기 위해 다각도로 접근하는 분석 방법입니다. 존 튜키(John Tukey)에 의해 제안된 개념으로 데이터를 있는 그대로 관찰하면서 숨겨진 패턴을 발견하고, 데이터의 분포를 확인하며, 이상치를 찾아내는 모든 과정을 포괄합니다.
+
+고전 통계학의 경우, 미리 설정한 가설이 통계적으로 유의미한지 확인하는 **검증**이라면, EDA는 선입견 없이 데이터 그 자체의 생김새를 살피며 숨겨진 패턴을 찾아내는 **질문**에 가깝습니다. 고전 통계학은 데이터가 특정 확률 분포(예: 정규분포)를 따른다는 전제를 두고 평균, 표준편차, p-value 등과 같은 지표에 의존하지만, EDA는 데이터의 전체적인 분포를 시각화하여 놓치기 쉬운 이상치나 비선형적 양상을 포착하는 것에 집중합니다. 
+
+이러한 EDA는 데이터에 대한 올바른 질문을 던지기 위해 반드시 필요합니다. 원시 데이터(Raw Data)는 결측치나 오류를 포함하고 있는 경우가 많아, 이를 그대로 분석에 사용하면 왜곡된 결과를 초래하는 문제가 발생합니다. 사전에 데이터를 시각화하고 기초 통계량을 확인하는 과정을 통해 데이터의 결함이나 예상치 못한 변수 간의 관계를 발견할 수 있으며, 이는 이후 진행될 본격적인 분석의 정확도를 높여줍니다.
+
+특히 고고학 분야에서 EDA의 중요성은 더욱 강조됩니다. 고고학 자료는 유물의 재질, 형태, 색상 같은 범주형 데이터부터 제원, 방사성탄소연대측정치와 같은 연속형 데이터, 그리고 유구의 위치를 나타내는 공간 데이터까지 그 성격이 엄청나게 다양합니다. 게다가 최근 지속적인 발굴조사가 누적되면서 분석해야 할 자료의 수는 기하급수적으로 늘어나고 있습니다. 또한 완전한 자료가 많지 않기에 결측치가 빈번하고, 현장 자체가 복잡한 맥락을 가지기에 EDA를 통해 데이터의 경향을 파악하고 과정은 고고학 연구에 많은 도움이 됩니다.
+
+EDA의 절차는 데이터 수집, 데이터 전처리, 기초통계량 확인 및 시각화의 흐름으로 진행됩니다. 먼저 흩어져 있는 발굴 조사 보고서나 측정 결과지에서 분석 목적에 맞는 데이터를 수집하여 병합합니다. 이후 전처리 단계에서는 데이터의 일관성을 맞추기 위해 변수명을 정리하고, 필요한 자료들을 필터링합니다. 그리고 이상치나 결측치를 어떻게 처리할지 결정합니다. 그리고 기초 통계량 및 시각화를 활용하여 데이터의 분포와 변수 간의 상관관계 등을 파악하는 과정으로 이루어집니다.
+
+## 4. 분석 실습
