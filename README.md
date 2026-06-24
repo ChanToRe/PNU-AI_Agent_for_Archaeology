@@ -1,5 +1,5 @@
-<img src="https://github.com/user-attachments/assets/d3a3ee87-7d34-4861-bdb3-15c8d0f00c85" height=100>
-<img src="https://github.com/user-attachments/assets/63bfe23c-8c0e-47a6-88a5-c175aa8595ee" height=50>
+<img src="https://github.com/user-attachments/assets/d3a3ee87-7d34-4861-bdb3-15c8d0f00c85" height=120>
+<img src="https://github.com/user-attachments/assets/63bfe23c-8c0e-47a6-88a5-c175aa8595ee" height=55>
 
 
 # AI 코딩을 활용한 고고학 자료 분석 실습
@@ -43,11 +43,34 @@ R은 데이터 분석 및 통계분석에 특화된 오픈소스 프로그래밍
 #### 소개
 통합개발환경(Integrated Development Environment, IDE)는 코드를 작성, 편집, 컴파일 및 디버그할 수 있는 소프트웨어입니다. 이를 통해 편리하게 코드 작성하고 프로젝트를 직관적으로 관리할 수 있습니다. 대표적인 IDE로는 Microsoft의 `VScode`, `Visual Studio` / Jetbrains의 `IntelliJ IDEA`, `Pycharms` Apple의 `Xcode` 등이 있습니다.
 
-#### 설치
+#### VScode 설치
 본 강의에서는 가장 범용적으로 사용되는 IDE인 VSCode를 활용합니다. Microsoft에서 개발하고 배포하는 VScode는 (1)무료, (2)대부분의 운영체제에서 서비스, (3)필요로 하는 컴퓨팅 자원이 적음, (4)수많은 확장기능(Extension) 등의 장점이 있습니다. 아래의 절차에 따라 VScode를 설치해주세요.
 1. 공식 홈페이지 접속: https://code.visualstudio.com/ 에 접속합니다.
 2. 설치 파일 다운로드: 메인 화면의 파란색 `Download for (운영체제)` 버튼을 클릭합니다.
 3. 설치 진행: 다운로드된 Setup 파일을 실행하여 설치를 완료합니다.
+
+#### Extension 설치
+VScode는 컴파일러를 내장하고 있는 것이 아니기 때문에 사용하는 언어에 따라 컴파일러를 설치해주어야합니다. 우리는 앞서 R을 설치하였기 때문에 이를 VScode와 연결해주는 Extension을 추가로 설치하면 됩니다. 이외에도 Extension 형태로 여러 편의기능을 제공하고 있기 때문에 이를 살펴볼 필요가 있습니다. Extension을 설치하는 방법과 목록은 아래를 참고해주세요.
+```
+설치방법
+1. Extension 열기
+- MacOS: Command(⌘) + Shift + X
+- Windows: Ctrl + Shift + X
+2. 필요한 기능 검색
+3. 설치 클릭
+```
+
+```
+필수
+- R: VScode 내에서 R 코드를 직접 실행할 수 있도록 지원
+
+선택
+- Code Spell Checker: 변수명이나 주석의 오탈자를 체크하여, 가독성을 높여줌
+- Korean Language Pack for Visual Studio Code: VScode의 모든 메뉴를 한국어로 변경
+- Material Icon Theme: 직관적이고 깔끔한 아이콘으로 변경
+- Prettier - Code formatter: 들여쓰기나 줄바꿈 등을 일관되고 깔끔하게 자동 정리해 줌
+- Spreadsheet Viewer: .csv, .xlsx 파일을 외부 VScode 내에서 보여줌
+```
 
 ### 1.3 AI Agent
 
