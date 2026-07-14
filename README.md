@@ -26,7 +26,7 @@
 
 #### 소개
 
-![R_Logo](References/R_Logo.png)
+![R_logo](References/R_Logo.png)
 
 R은 데이터 분석 및 통계분석에 특화된 오픈소스 프로그래밍 언어입니다. University of Auckland의 Ross Ihaka와 Robert Gentleman에 의해 개발되었으며, 데이터 처리와 시각화에 특화되어 있습니다. 통계분석과 관련된 수많은 패키지들이 구현되어 있으며, 고고학 분석에 활용되는 패키지들도 대부분 R로 구현되어 있습니다.
 
